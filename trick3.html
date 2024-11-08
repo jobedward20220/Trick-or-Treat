@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 2nd Monthsary</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            overflow: hidden; /* Prevent scrollbars when button moves */
+            margin: 0;
+            font-family: 'Arial', sans-serif; /* Clean font for better readability */
+
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Flexbox for centering */
+            flex-direction: column; /* Column layout */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+        }
+
+        .container {
+            text-align: center;
+
+        }
+
+        .cat1 img {
+            width: 80%; /* Responsive width for mobile */
+            max-width: 300px; /* Limit maximum width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for the image */
+        }
+
+        h1 {
+            font-size: 1.5rem; /* Base font size */
+            color: #ffb800; /* Darker text for readability */
+            margin: 20px 0; /* Spacing around the heading */
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 20px; /* Adjust padding for better touch targets */
+            margin: 10px;
+            background-color: #ff5c00; /* Button color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 1rem; /* Set a base font size */
+            min-width: 100px; /* Ensure buttons are not too small */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        }
+
+        .btn:hover {
+            background-color: #e64a00; /* Button hover color */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem; /* Slightly smaller font size for smaller screens */
+            }
+
+            .btn {
+                padding: 12px 15px; /* Adjust padding for mobile */
+                font-size: 0.9rem; /* Slightly smaller font size */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cat1">
+            <img src="https://media.tenor.com/amRuuQRN6d0AAAAi/love.gif" alt="Love GIF">
+        </div>
+        <h1>Love pwede ko mo uban please?! You can't say no to me my love</h1>
+    </div>
+
+    <div class="button-container">
+        <a href="yestrick.html" class="btn">Yes</a>
+        <a href="#" class="btn" id="noButton" onclick="moveButton()">No</a>
+    </div>
+
+    <script>
+        function moveButton() {
+            const button = document.getElementById('noButton');
+            const windowWidth = window.innerWidth - button.offsetWidth; // Max width for the button
+            const windowHeight = window.innerHeight - button.offsetHeight; // Max height for the button
+
+            // Generate random positions within the window
+            const randomX = Math.floor(Math.random() * windowWidth);
+            const randomY = Math.floor(Math.random() * windowHeight);
+
+            // Set new position for the button
+            button.style.position = 'absolute';
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        }
+    </script>
+</body>
+
+</html>
+

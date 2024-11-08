@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f0e17; /* Dark background for Halloween feel */
+    background-image: url('https://www.transparenttextures.com/patterns/batthern.png'); /* Subtle bat pattern */
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for Halloween theme */
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    color: #fff;
+}
+
+.title {
+    font-size: 2rem;
+    color: #ff5c00; /* Halloween orange */
+    margin-bottom: 20px;
+}
+
+.choices-container table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+td {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.option-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    transition: transform 0.2s;
+}
+
+.option-img:hover {
+    transform: scale(1.05);
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.continue-btn {
+    background-color: #ff5c00; /* Halloween orange */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+    background-color: #e64a00;
+}

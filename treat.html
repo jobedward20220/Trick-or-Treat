@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 2nd Monthsary</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0f0e17;
+            background-image: url('https://www.transparenttextures.com/patterns/batthern.png');
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 15px;
+        }
+
+        .halloween-title {
+            font-size: 2.2rem;
+            color: #ff5c00;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px #000000;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #f0e6d0;
+        }
+
+        .date-picker {
+            margin-bottom: 20px;
+        }
+
+        .date-input {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .date-input:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 92, 0, 0.7), 0 0 20px rgba(255, 92, 0, 0.5);
+        }
+
+        .cat1 img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 400px;
+            width: 100%;
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background-color: #ff5c00;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+            flex: 1;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #e64a00;
+            box-shadow: 0 0 10px rgba(255, 92, 0, 0.7), 0 0 20px rgba(255, 92, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .no-btn {
+            background-color: #333;
+        }
+
+        .no-btn:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .halloween-title {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .date-input {
+                width: 90%;
+            }
+
+            .button-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Custom Flatpickr Styling */
+        .flatpickr-calendar {
+            background-color: #222;
+            color: #ff5c00;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .flatpickr-months .flatpickr-current-month {
+            color: #ff5c00;
+        }
+
+        .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month {
+            color: #ff5c00 !important; /* Set month dropdown text to orange */
+        }
+
+        .flatpickr-day {
+            color: #ffb800;
+            background-color: #333;
+        }
+
+        .flatpickr-day:hover, .flatpickr-monthDropdown-month:hover {
+            background-color: #444;
+        }
+
+        .flatpickr-day.today {
+            border: 2px solid #ff5c00;
+        }
+
+        .flatpickr-day.selected {
+            background-color: #ff5c00;
+            color: #222;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="halloween-title">Are you available on..</h1>
+        <p>Select a special date:</p>
+        
+        <!-- Date Picker -->
+        <div class="date-picker">
+            <input id="celebration-date" name="celebration-date" class="date-input" placeholder="Select Date">
+        </div>
+        
+        <div class="cat1">
+            <img src="https://media.tenor.com/rgrSwLtyoc0AAAAi/cat-halloween.gif" alt="Halloween cat GIF">
+        </div>
+        
+        <div class="button-container">
+            <a href="treat2.html" class="btn">Continue</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            flatpickr("#celebration-date", {
+                dateFormat: "Y-m-d",
+                monthSelectorType: "dropdown" // Shows the month selector as a dropdown
+            });
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 2nd Monthsary</title>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0f0e17;
+            background-image: url('https://www.transparenttextures.com/patterns/batthern.png');
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            margin: 0 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .title {
+            font-size: 2rem;
+            color: #ff5c00;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #f0e6d0;
+        }
+
+        .food-choice-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .food-item {
+            width: 100px;
+            background-color: #222;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #f0e6d0;
+            cursor: pointer;
+        }
+
+        .food-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+
+        .food-item input[type="checkbox"] {
+            display: none;
+        }
+
+        .food-item label {
+            font-size: 0.9rem;
+            display: block;
+            color: #f0e6d0;
+            cursor: pointer;
+        }
+
+        .food-item input[type="checkbox"]:checked + label {
+            color: #ff5c00;
+            font-weight: bold;
+            text-shadow: 0px 0px 8px rgba(255, 92, 0, 0.7);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background-color: #ff5c00;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #e64a00;
+            box-shadow: 0 0 10px rgba(255, 92, 0, 0.7), 0 0 20px rgba(255, 92, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .container {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .title {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .food-item {
+                width: 100px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">What do you want to eat?</h1>
+        <p>You can choose as many as you want</p>
+        
+        <!-- Food Choices -->
+        <div class="food-choice-container">
+            <div class="food-item">
+                <input type="checkbox" id="food1" name="food" value="Pizza">
+                <label for="food1"><img src="https://i.pinimg.com/564x/4e/56/fa/4e56fa3ef27a56c8b5e6bec2b2b18d7f.jpg" alt="Pizza">Pizza</label>
+            </div>
+
+            <div class="food-item">
+                <input type="checkbox" id="food2" name="food" value="Sushi">
+                <label for="food2"><img src="https://i.pinimg.com/564x/9e/3b/4b/9e3b4b3072b96dce9a6ee29d37345c89.jpg" alt="Sushi">Sushi</label>
+            </div>
+
+            <div class="food-item">
+                <input type="checkbox" id="food3" name="food" value="Burger">
+                <label for="food3"><img src="https://i.pinimg.com/564x/d5/d4/bb/d5d4bb7e8a83e3cc20f3383e4ca3e5c7.jpg" alt="Burger">Burger</label>
+            </div>
+
+            <div class="food-item">
+                <input type="checkbox" id="food4" name="food" value="Pasta">
+                <label for="food4"><img src="https://i.pinimg.com/564x/b2/22/e5/b222e55a32c0e801694b10b5696eecb4.jpg" alt="Pasta">Pasta</label>
+            </div>
+
+            <div class="food-item">
+                <input type="checkbox" id="food5" name="food" value="Buldak">
+                <label for="food5"><img src="https://i.pinimg.com/736x/82/b6/21/82b6216407b25d2cab8d99f9ee9164b4.jpg" alt="Buldak">Buldak</label>
+            </div>
+
+            <div class="food-item">
+                <input type="checkbox" id="food6" name="food" value="Gimbap">
+                <label for="food6"><img src="https://i.pinimg.com/736x/4f/c4/e1/4fc4e16cd955a9ada3246349ab892857.jpg" alt="Gimbap">Gimbap</label>
+            </div>
+
+            <div class="food-item">
+                <input type="checkbox" id="food7" name="food" value="Tteokbokki">
+                <label for="food7"><img src="https://i.pinimg.com/564x/33/ed/35/33ed35902cceb8763af82ad89cb3e479.jpg" alt="Tteokbokki">Tteokbokki</label>
+            </div>
+
+            <div class="food-item">
+                <input type="checkbox" id="food8" name="food" value="Ice Cream">
+                <label for="food8"><img src="https://i.pinimg.com/564x/a9/b8/a2/a9b8a266a4c061ca6ab6af63cf2e7caa.jpg" alt="Ice Cream">Ice Cream</label>
+            </div>
+
+            <div class="food-item">
+                <input type="checkbox" id="food9" name="food" value="Fries">
+                <label for="food9"><img src="https://i.pinimg.com/564x/73/7e/d9/737ed93987aae98a76fc2e5f12fc0ecc.jpg" alt="Fries">Fries</label>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <a href="treat3.html" class="btn">Continue</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

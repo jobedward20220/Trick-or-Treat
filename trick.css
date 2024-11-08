@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f0e17; /* Dark background for Halloween feel */
+    background-image: url('https://www.transparenttextures.com/patterns/batthern.png'); /* Subtle bat pattern */
+    background-size: cover;
+    overflow: hidden; /* Prevents scrollbars on mobile */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 92, 0, 0.1); /* Transparent orange for Halloween vibe */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%; /* Full width on mobile */
+}
+
+.title {
+    font-size: 2rem;
+    color: #ff5c00; /* Halloween orange */
+    margin-bottom: 20px;
+    padding-top: 20px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.table1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+td {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+td img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 0 15px rgba(255, 92, 0, 0.5); /* Orange glow */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+td img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 92, 0, 0.8);
+}
+
+input[type="radio"] {
+    margin-top: 8px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #f0e6d0; /* Light color for text */
+}
+
+.continue-btn {
+    background-color: #ff5c00; /* Halloween orange */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width on mobile */
+}
+
+.continue-btn:hover {
+    background-color: #e64a00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table1 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+        gap: 15px;
+    }
+
+    td img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .table1 {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+        gap: 15px;
+    }
+
+    td img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
